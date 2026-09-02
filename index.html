@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <style>
-      
+        /* ===== RESET & BASE ===== */
         *,
         *::before,
         *::after {
@@ -561,77 +561,6 @@
             line-height: 1.7;
         }
 
-        /* ===== PRODUCTS ===== */
-        .products {
-            background: var(--off-white);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 28px;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 28px 20px 24px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid var(--gray-100);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--gray-200);
-        }
-
-        .product-card .product-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 14px;
-            display: block;
-        }
-
-        .product-card h4 {
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-
-        .product-card .category {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .product-card .price {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.1rem;
-            margin-top: 10px;
-        }
-
-        .product-card .btn-small {
-            margin-top: 14px;
-            padding: 8px 22px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            background: var(--primary-bg);
-            color: var(--primary);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .product-card .btn-small:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-
         /* ===== ABOUT ===== */
         .about {
             background: var(--white);
@@ -1123,10 +1052,6 @@
                 font-size: 2rem;
             }
 
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .about-features {
                 grid-template-columns: 1fr;
             }
@@ -1144,19 +1069,6 @@
         }
 
         @media (max-width: 480px) {
-            .products-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
-            }
-
-            .product-card {
-                padding: 18px 12px;
-            }
-
-            .product-card .product-icon {
-                font-size: 2.2rem;
-            }
-
             .service-card {
                 padding: 24px 18px;
             }
@@ -1193,7 +1105,6 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#products">Products</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact" class="nav-cta">Contact Us</a></li>
@@ -1225,8 +1136,8 @@
                         friendly advice, we're here to make your health journey easier — every step of the way.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#products" class="btn btn-primary">
-                            <i class="fas fa-shopping-bag"></i> Shop Now
+                        <a href="#services" class="btn btn-primary">
+                            <i class="fas fa-stethoscope"></i> Our Services
                         </a>
                         <a href="#about" class="btn btn-secondary">
                             <i class="fas fa-info-circle"></i> Our Story
@@ -1299,61 +1210,6 @@
                     <div class="icon"><i class="fas fa-syringe"></i></div>
                     <h3>Vaccinations & Clinics</h3>
                     <p>Flu shots, travel vaccines, and more – walk-ins welcome. We make staying healthy easy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PRODUCTS ===== -->
-    <section class="section products" id="products">
-        <div class="container">
-            <div class="section-header">
-                <span class="badge"><i class="fas fa-capsules" style="margin-right:6px;"></i> Our Range</span>
-                <h2>Trusted <span>Medicines</span> at Fair Prices</h2>
-                <p>We stock only genuine products from reputable manufacturers – because your health is not a gamble.</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <span class="product-icon"><i class="fas fa-tablets"></i></span>
-                    <h4>Panadol Extra 500mg</h4>
-                    <span class="category">Pain Relief</span>
-                    <div class="price">$8.50</div>
-                    <button class="btn-small">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <span class="product-icon"><i class="fas fa-pills"></i></span>
-                    <h4>Amoxil 250mg Capsules</h4>
-                    <span class="category">Antibiotic</span>
-                    <div class="price">$14.20</div>
-                    <button class="btn-small">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <span class="product-icon"><i class="fas fa-capsules"></i></span>
-                    <h4>Vitamin D3 2000IU</h4>
-                    <span class="category">Supplements</span>
-                    <div class="price">$11.90</div>
-                    <button class="btn-small">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <span class="product-icon"><i class="fas fa-heartbeat"></i></span>
-                    <h4>Omeprazole 20mg</h4>
-                    <span class="category">Digestive Health</span>
-                    <div class="price">$9.75</div>
-                    <button class="btn-small">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <span class="product-icon"><i class="fas fa-bolt"></i></span>
-                    <h4>Zyrtec 10mg Tablets</h4>
-                    <span class="category">Allergy Relief</span>
-                    <div class="price">$7.30</div>
-                    <button class="btn-small">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <span class="product-icon"><i class="fas fa-syringe"></i></span>
-                    <h4>Insulin Pen 100IU</h4>
-                    <span class="category">Diabetes Care</span>
-                    <div class="price">$42.50</div>
-                    <button class="btn-small">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -1455,9 +1311,9 @@
                     <h2>We're Here for You – <br />Anytime</h2>
                     <p>Reach out by phone, email, or just drop by. We love seeing familiar faces.</p>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Ave, Health City, HC 45678</li>
-                        <li><i class="fas fa-phone-alt"></i> +1 (800) 555-0199</li>
-                        <li><i class="fas fa-envelope"></i> care@yojalpharmacy.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kanya Campus Rd, Bharatpur, Chitwan, Nepal</li>
+                        <li><i class="fas fa-phone-alt"></i> +977- 985-5086350</li>
+                        <li><i class="fas fa-envelope"></i> webmaster@yojalpharmacy.com</li>
                     </ul>
                 </div>
                 <div class="contact-form">
@@ -1505,8 +1361,8 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
                     </ul>
                 </div>
                 <div>
@@ -1529,8 +1385,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2026 Yojal Pharmacy – Developed By <a href="//sangam69.com.np">Sangam Sherestha.</a>
-</span>
+                <span>&copy; 2026 Yojal Pharmacy – Developed By <a href="//sangam69.com.np">Sangam Sherestha.</a></span>
                 <span>
                     <a href="#">Privacy Policy</a> &middot;
                     <a href="#">Terms of Service</a>
@@ -1630,8 +1485,8 @@
             });
         }, observerOptions);
 
-        // Observe service cards, product cards, testimonial cards
-        document.querySelectorAll('.service-card, .product-card, .testimonial-card, .about-grid, .contact-cta-grid')
+        // Observe service cards, testimonial cards, about grid, contact grid
+        document.querySelectorAll('.service-card, .testimonial-card, .about-grid, .contact-cta-grid')
             .forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(28px)';
@@ -1649,7 +1504,7 @@
 
         // Trigger initial load for elements already visible
         setTimeout(() => {
-            document.querySelectorAll('.service-card, .product-card, .testimonial-card, .about-grid, .contact-cta-grid, .section-header')
+            document.querySelectorAll('.service-card, .testimonial-card, .about-grid, .contact-cta-grid, .section-header')
                 .forEach(el => {
                     const rect = el.getBoundingClientRect();
                     if (rect.top < window.innerHeight) {
